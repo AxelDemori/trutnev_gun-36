@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|c:\\users\\\u0432\u0430\u0434\u0438\u043C\\downloads\\ai_10_health_ammo_pickups\\assets\\scripts\\weapons\\weaponrecoil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weaponrecoil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|c:\\users\\\u0432\u0430\u0434\u0438\u043C\\downloads\\ai_10_health_ammo_pickups\\assets\\scripts\\camera\\cameramanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera\\cameramanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\assets\\scripts\\environment\\ammopickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\environment\\ammopickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\assets\\scripts\\environment\\healthpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\environment\\healthpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\assets\\scripts\\animation\\bounceanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\animation\\bounceanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|c:\\users\\\u0432\u0430\u0434\u0438\u043C\\downloads\\ai_10_health_ammo_pickups\\assets\\scripts\\player\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|c:\\users\\\u0432\u0430\u0434\u0438\u043C\\downloads\\ai_10_health_ammo_pickups\\assets\\scripts\\ai\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A787E2-8F04-7177-932A-75164B441ABF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeaponRecoil.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Weapons\\WeaponRecoil.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\WeaponRecoil.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Weapons\\WeaponRecoil.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapons\\WeaponRecoil.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowBwAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T18:15:37.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CameraManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Camera\\CameraManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Camera\\CameraManager.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Camera\\CameraManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Camera\\CameraManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T18:14:15.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T18:02:34.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AiSensor.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Ai\\AiSensor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ai\\AiSensor.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Ai\\AiSensor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ai\\AiSensor.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAIBJwAoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T14:52:01.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AmmoPickup.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Environment\\AmmoPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Environment\\AmmoPickup.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Environment\\AmmoPickup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Environment\\AmmoPickup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T14:42:46.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HealthPickup.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Environment\\HealthPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Environment\\HealthPickup.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Environment\\HealthPickup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Environment\\HealthPickup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T14:42:16.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BounceAnimation.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Animation\\BounceAnimation.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Animation\\BounceAnimation.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0434\u0438\u043C\\Downloads\\ai_10_health_ammo_pickups\\Assets\\Scripts\\Animation\\BounceAnimation.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Animation\\BounceAnimation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T14:38:31.416Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
