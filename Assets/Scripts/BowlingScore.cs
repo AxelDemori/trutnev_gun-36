@@ -6,18 +6,17 @@ public class BowlingScore : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI scoreText;
 
+    [Header("References")]
+    [SerializeField] private BowlingPin[] allPins;
+    [SerializeField] private Ball ballThrow;
+
     private int totalScore = 0;
     private int pinsKnockedThisFrame = 0;
     private int currentFrame = 1;
     private int currentThrow = 1;
 
-    private BowlingPin[] allPins;
-    private Ball ballThrow;
-
     void Start()
     {
-        allPins = FindObjectsOfType<BowlingPin>();
-        ballThrow = FindObjectOfType<Ball>();
         UpdateScoreDisplay();
     }
 
@@ -25,19 +24,16 @@ public class BowlingScore : MonoBehaviour
     {
         pinsKnockedThisFrame++;
         UpdateScoreDisplay();
-
     }
 
     public void EndThrow()
     {
         totalScore += pinsKnockedThisFrame;
-
         RespawnEverything();
     }
 
     void RespawnEverything()
     {
-
         foreach (var pin in allPins)
         {
             if (pin != null)
@@ -67,9 +63,9 @@ public class BowlingScore : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = $"Фрейм: {currentFrame} | Бросок: {currentThrow}\n" +
-                           $"Сбито: {pinsKnockedThisFrame}\n" +
-                           $"Очки: {totalScore}";
+            scoreText.text = $"Frame: {currentFrame} | Throw: {currentThrow}\n" +
+                           $"Shot down: {pinsKnockedThisFrame}\n" +
+                           $"Score: {totalScore}";
         }
     }
 }
