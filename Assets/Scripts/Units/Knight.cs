@@ -26,11 +26,7 @@ public class Knight : Unit
                 continue;
 
             Cell targetCell = BattleController.Instance?.GetCell(nextPos.x, nextPos.y);
-            if (targetCell == null)
-                continue;
-
-            
-            if (targetCell.CurrentUnit == null || targetCell.CurrentUnit.Team != team)
+            if (targetCell != null && CanMoveToCell(targetCell))
             {
                 moves.Add(nextPos);
             }

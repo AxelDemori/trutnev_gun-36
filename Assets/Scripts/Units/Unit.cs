@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class Unit : MonoBehaviour, ISelectable
+public abstract class Unit : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [Header("Unit Data")]
     [SerializeField] protected PieceType pieceType;
@@ -14,14 +14,12 @@ public abstract class Unit : MonoBehaviour, ISelectable
     protected Cell currentCell;
     protected bool isFirstMove = true;
 
-    // Свойства
     public PieceType PieceType => pieceType;
     public Team Team => team;
     public Cell CurrentCell => currentCell;
     public bool IsFirstMove => isFirstMove;
     public Vector2Int BoardPosition => currentCell?.BoardPosition ?? new Vector2Int(-1, -1);
 
-    // Направления для фигур (можно переопределить в наследниках)
     protected Vector2Int[] rookDirections = {
         new Vector2Int(0, 1), new Vector2Int(1, 0),
         new Vector2Int(0, -1), new Vector2Int(-1, 0)
@@ -38,12 +36,12 @@ public abstract class Unit : MonoBehaviour, ISelectable
             selectionIndicator.SetActive(false);
     }
 
-    public virtual void Initialize(Cell startCell)
+    public virtual void Initialize(Cell startCell, Team pieceTeam)
     {
         currentCell = startCell;
+        team = pieceTeam;
         currentCell.SetUnit(this);
 
-        // Позиционируем фигуру над клеткой
         transform.position = startCell.transform.position + Vector3.up * 0.5f;
 
         Deselect();
@@ -63,10 +61,21 @@ public abstract class Unit : MonoBehaviour, ISelectable
             isFirstMove = false;
     }
 
-    // Абстрактный метод для получения возможных ходов
     public abstract List<Vector2Int> GetPossibleMoves();
 
-    // Вспомогательные методы для вычисления ходов
+    protected bool IsWithinBoard(Vector2Int gridPoint)
+    {
+        return gridPoint.x >= 0 && gridPoint.x < 8 &&
+               gridPoint.y >= 0 && gridPoint.y < 8;
+    }
+
+    protected bool CanMoveToCell(Cell targetCell)
+    {
+        if (targetCell == null) return false;
+        if (targetCell.CurrentUnit == null) return true;
+        return targetCell.CurrentUnit.Team != this.team;
+    }
+
     protected List<Vector2Int> GetSlidingMoves(Vector2Int[] directions, int maxSteps = 7)
     {
         List<Vector2Int> moves = new List<Vector2Int>();
@@ -88,19 +97,12 @@ public abstract class Unit : MonoBehaviour, ISelectable
                 if (targetCell == null)
                     continue;
 
-                // Если клетка пустая - можно ходить
-                if (targetCell.CurrentUnit == null)
+                if (CanMoveToCell(targetCell))
                 {
                     moves.Add(nextPos);
                 }
-                // Если клетка занята врагом - можно атаковать, но дальше нельзя
-                else if (targetCell.CurrentUnit.Team != team)
-                {
-                    moves.Add(nextPos);
-                    break;
-                }
-                // Если клетка занята союзником - нельзя ходить
-                else
+
+                if (targetCell.CurrentUnit != null)
                 {
                     break;
                 }
@@ -110,13 +112,6 @@ public abstract class Unit : MonoBehaviour, ISelectable
         return moves;
     }
 
-    protected bool IsWithinBoard(Vector2Int gridPoint)
-    {
-        return gridPoint.x >= 0 && gridPoint.x < 8 &&
-               gridPoint.y >= 0 && gridPoint.y < 8;
-    }
-
-    // Реализация ISelectable
     public virtual void Select()
     {
         if (selectionIndicator != null)
@@ -145,19 +140,18 @@ public abstract class Unit : MonoBehaviour, ISelectable
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        BattleController.Instance?.OnUnitClicked(this);
+        BattleController.Instance?.OnCellClicked(currentCell);
     }
 
     public virtual void Capture()
     {
-        currentCell?.ClearUnit();
+        if (currentCell != null)
+            currentCell.ClearUnit();
         Destroy(gameObject);
     }
 
-    // Для превращения пешки
     public virtual void Promote(PieceType newType)
     {
         pieceType = newType;
-        // Здесь можно поменять модель фигуры
     }
 }

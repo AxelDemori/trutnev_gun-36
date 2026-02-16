@@ -6,6 +6,11 @@ public class PlayerController : MonoBehaviour
 
     public bool IsInputBlocked => isInputBlocked;
 
+    public void BlockInput(bool block)
+    {
+        isInputBlocked = block;
+    }
+
     public void ExecuteCommand(IGameplayCommand command, System.Action onComplete = null)
     {
         if (isInputBlocked)
@@ -15,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
         command.Execute();
 
-        Invoke("UnblockInput", 0.3f);
+        Invoke(nameof(UnblockInput), 0.3f);
 
         onComplete?.Invoke();
     }
