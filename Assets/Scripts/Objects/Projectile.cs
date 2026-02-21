@@ -7,6 +7,7 @@ namespace Netologia.TowerDefence
 	{
 		private float _damage;
 		private Vector3? _endPosition;
+		private Transform _targetTransform;
 		private Unit _target;
 		
 		private ElementalType _elementalType;

@@ -1,10 +1,10 @@
-﻿using System;
-using Behaviours;
+﻿using Behaviours;
 using JetBrains.Annotations;
 using Netologia.Behaviours;
 using Netologia.TowerDefence;
 using Netologia.TowerDefence.Behaviors;
 using Netologia.TowerDefence.Settings;
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -12,10 +12,10 @@ namespace Netologia.Systems
 {
 	public class UnitSystem : GameObjectPoolContainer<Unit>, Director.IManualUpdate
 	{
-		private Director _director;					//injected
-		private EffectSystem _effects;				//injected
-		private Constants _constants;				//injected
-		private Vector3[] _path;					//injected
+		private Director _director;		
+		private EffectSystem _effects;				
+		private Constants _constants;				
+		private Vector3[] _path;			
 
 		[SerializeField, Min(0.01f)]
 		private float _arrivalDistance = 0.1f;
@@ -42,7 +42,40 @@ namespace Netologia.Systems
 
 		public void ManualUpdate()
 		{
-			//todo Netologia homework 
+			var delta = TimeManager.DeltaTime;
+			var time = TimeManager.Time;
+			foreach (var pool in this)
+				foreach (var unit in pool)
+				{
+					var transform = unit.transform;
+					var position = transform.position;
+					if (unit.CurrentHealth <= 0f)
+					{
+						OnDespawnUnitHandler.Invoke(unit.ID);
+						DespawnUnit(unit, in position);
+						continue;
+					}
+					unit.Visual.ManualUpdate(delta);
+					unit.CurrentHealth -= unit.Stats.Health * unit.CountEffect(ElementalType.Fire)
+						* _constants.FireDebuffDamageMult;
+					unit.TryRemoveEffect(time, ElementalType.Fire);
+					unit.TryRemoveEffect(time, ElementalType.Ice);
+
+					var point = _path[unit.PathIndex];
+					position += Vector3.Normalize(point - position) * (unit.MoveSpeed * delta);
+					transform.position = position;
+
+					if(Vector3.SqrMagnitude(position - point) <= _arrivalDistance)
+					{
+						unit.PathIndex++;
+						if(unit.PathIndex >= _path.Length)
+						{
+							_director.AddPlayerDamage(_constants.UnitDamage);
+							this[unit.Ref].ReturnElement(unit.ID);
+
+						}
+					}
+				}
 		}
 
 		private void DespawnUnit(Unit unit, in Vector3 position)
