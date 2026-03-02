@@ -34,7 +34,6 @@ namespace InteractiveObjects
                 return;
             }
             Interaction(other.gameObject);
-            IsInteractable = false;
         }
 
         protected abstract void Interaction(GameObject otherGameObject);
