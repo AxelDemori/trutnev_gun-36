@@ -29,7 +29,7 @@ namespace InteractiveObjects
 
         protected override void Interaction(GameObject otherGameObject)
         {
-            _health.Health.SetValueAndForceNotify(20);
+            _health.Health.SetValueAndForceNotify(100);
             _counter.Count.Value += 1;
             Debug.LogError(message: "HP RESTORED!");
         }

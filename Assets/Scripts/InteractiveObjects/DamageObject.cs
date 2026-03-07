@@ -1,5 +1,4 @@
 using System.Model;
-using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
@@ -11,8 +10,11 @@ namespace InteractiveObjects
 
         [Inject]
         private void Inject(PlayerHealth health) => _health = health;
+
         protected override void Interaction(GameObject otherGameObject)
+           
         {
+            UnityEngine.Debug.Log("Damage!");
             _health.Health.Value -= 70;
         }
 
