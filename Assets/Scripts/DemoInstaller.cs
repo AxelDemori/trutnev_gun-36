@@ -13,7 +13,6 @@ namespace DefaultNamespace
     public sealed class DemoInstaller : MonoInstaller
     {
         [SerializeField] private Radar _radar;
-
         public override void InstallBindings()
         {
             BindModels();
@@ -39,12 +38,12 @@ namespace DefaultNamespace
 
         private void BindView()
         {
-            Container.Bind<IRadar>().To<Radar>().FromInstance(_radar);
+            Container.Bind<IRadar>().To<Radar>().FromInstance(_radar).AsSingle();
         }
 
         private void BindServices()
         {
-            Container.Bind<IData<SavedData>>().To<BinarySerializationData<SavedData>>().AsSingle();
+            Container.Bind<IData<SavedData>>().To<SerializableXMLData<SavedData>>().AsSingle();
             Container.BindInterfacesAndSelfTo<SaveDataService>().AsSingle();
         }
     }

@@ -9,6 +9,8 @@ namespace MiniMap
     public sealed class MiniMap : MonoBehaviour
     {
         private Transform _player;
+
+        [Inject]
         private void Inject([Inject(Id = "Camera")] Transform mainCamera)
         {
             _player = mainCamera;

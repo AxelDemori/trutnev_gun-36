@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SavedData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Name</Name>
+  <Position>
+    <X>-7.63078928</X>
+    <Y>1</Y>
+    <Z>-5.83</Z>
+  </Position>
+  <IsEnabled>true</IsEnabled>
+</SavedData>
