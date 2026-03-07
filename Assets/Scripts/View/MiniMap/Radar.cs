@@ -1,27 +1,38 @@
+using Interface;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
+using System.Collections.ObjectModel;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 namespace MiniMap
 {
-    public sealed class Radar : MonoBehaviour
+    public sealed class Radar : MonoBehaviour, IRadar
     {
         private readonly float _mapScale = 2;
         private Transform _playerPos;
-        public static List<RadarObject> RadObjects = new();
-        private void Start()
+        public List<RadarObject> RadObjects = new();
+
+        [Inject]
+        private void Inject([Inject(Id = "Camera")]Transform mainCamera)
         {
-            _playerPos = Camera.main.transform;
+            _playerPos = mainCamera;
+
+            Observable
+                .EveryUpdate()
+                .Where(_ => Time.frameCount % 2 == 0)
+                .Subscribe(_ => DrawRadarDots())
+                .AddTo(this);
         }
-        public static void RegisterRadarObject(GameObject o, Image i)
+
+        public void RegisterRadarObject(GameObject o, Image i)
         {
             var image = Instantiate(i);
-            RadObjects.Add(item: new RadarObject { Owner = o, Icon = image });
+            RadObjects.Add( new RadarObject { Owner = o, Icon = image });
 
         }
-        public static void RemoveRadarObject(GameObject o)
+        public void RemoveRadarObject(GameObject o)
         {
             List<RadarObject> newList = new List<RadarObject>();
             foreach (RadarObject t in RadObjects)
@@ -49,13 +60,6 @@ namespace MiniMap
                 radarPos.z = distToObject * Mathf.Sin(f: deltay * Mathf.Deg2Rad);
                 rad0bject.Icon.transform.SetParent(transform);
                 rad0bject.Icon.transform.position = new Vector3(radarPos.x, y: radarPos.z, z: 0) + transform.position;
-            }
-        }
-        private void Update()
-        {
-            if (Time.frameCount % 2 == 0)
-            {
-                DrawRadarDots();
             }
         }
     }

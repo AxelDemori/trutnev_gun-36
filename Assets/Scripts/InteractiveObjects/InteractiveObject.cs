@@ -1,10 +1,15 @@
+using System;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 namespace InteractiveObjects
-{ 
+{
     public abstract class InteractiveObject : MonoBehaviour
     {
         private bool _isInteractable;
+        private Renderer _renderer;
+        private Collider _collider;
 
         protected bool IsInteractable
         {
@@ -12,43 +17,38 @@ namespace InteractiveObjects
             private set
             {
                 _isInteractable = value;
-                GetComponent<Renderer>().enabled = _isInteractable;
-                GetComponent<Collider>().enabled = _isInteractable;
+                if (_renderer != null) _renderer.enabled = _isInteractable;
+                if (_collider != null) _collider.enabled = _isInteractable;
             }
-        }
-
-        private void OnTriggerEnter(Collider other)
-        { 
-            if (!IsInteractable || !other.CompareTag("Player"))
-            { 
-                return; 
-            }
-            Interaction(other.gameObject);
-            IsInteractable = false;
-        }
-
-        private void OnCollisionEnter(Collision other)
-        {
-            if (!IsInteractable || !other.gameObject.CompareTag("Player"))
-            {
-                return;
-            }
-            Interaction(other.gameObject);
         }
 
         protected abstract void Interaction(GameObject otherGameObject);
-
         public abstract void Execute();
+
+        private void Awake()
+        {
+            _renderer = GetComponent<Renderer>();
+            _collider = GetComponent<Collider>();
+        }
 
         private void Start()
         {
             IsInteractable = true;
-        }
 
-        private void Update()
+            this.OnCollisionEnterAsObservable()
+                .Where(collision => IsInteractable && collision.gameObject.CompareTag("Player"))
+                .Subscribe(collision => Interaction(collision.gameObject))
+                .AddTo(this);
 
-        {
-            Execute();
+            this.OnTriggerEnterAsObservable()
+                .Where(collider => IsInteractable && collider.CompareTag("Player"))
+                .Do(_ => IsInteractable = false)
+                .Subscribe(collider => Interaction(collider.gameObject))
+                .AddTo(this);
+
+            Observable.EveryUpdate()
+                .Subscribe(_ => Execute())
+                .AddTo(this);
         }
     }
 }

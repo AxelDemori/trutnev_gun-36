@@ -1,28 +1,36 @@
+using System;
 using UnityEditor.VersionControl;
+using UniRx;
 using UnityEngine;
+using Zenject;
 
 namespace MiniMap
 {
     public sealed class MiniMap : MonoBehaviour
     {
         private Transform _player;
-        private void Start()
+        private void Inject([Inject(Id = "Camera")] Transform mainCamera)
         {
-            _player = Camera.main.transform;
+            _player = mainCamera;
             transform.parent = null;
-            transform.rotation = Quaternion.Euler(x:90.0f, y:0, z:0);
-            transform.position = _player.position + new Vector3(x:0, y:5.0f, z:0);
+            transform.rotation = Quaternion.Euler(90.0f, 0, 0);
+            transform.position = _player.position + new Vector3(0, 5.0f, 0);
 
-            var rt = Resources.Load<RenderTexture>(path:"MiniMap/MiniMapTexture");
-
-            GetComponent<Camera>().targetTexture = rt;
+            Resources.LoadAsync<RenderTexture>(path: "MiniMap/MiniMapTexture").AsAsyncOperationObservable().Subscribe(OnTextureLoaded).AddTo(this);
         }
-        private void LateUpdate()
+
+            private void OnTextureLoaded(ResourceRequest obj)
+        {
+            GetComponent<Camera>().targetTexture = obj.asset as RenderTexture;
+            Observable.EveryLateUpdate().Subscribe(OnLateUpdate).AddTo(this);
+        }
+        
+        private void OnLateUpdate(long param)
         {
             var newPosition = _player.position;
             newPosition.y = transform.position.y;
             transform.position = newPosition;
-            transform.rotation = Quaternion.Euler(x: 90, _player.eulerAngles.y, z: 0);
+            transform.rotation = Quaternion.Euler(90, _player.eulerAngles.y, 0);
         }
     }
 }

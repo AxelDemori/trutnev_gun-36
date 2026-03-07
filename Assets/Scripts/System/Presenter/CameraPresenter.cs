@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class CameraPresenter : MonoBehaviour
+namespace System.Presenter
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CameraPresenter : ILateTickable, IInitializable
     {
-        
-    }
+        private Transform _player;
+        private Transform _mainCamera;
+        private Vector3 _offset;
+        public CameraPresenter([Inject(Id = "Player")] Transform player, [Inject(Id = "Camera")] Transform mainCamera)
+        {
+            _player = player;
+            _mainCamera = mainCamera;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Initialize()
+        {
+            _mainCamera.LookAt(_player);
+            _offset = _mainCamera.position - _player.position;
+        }
+        public void LateTick() => _mainCamera.position = _player.position + _offset;
     }
 }
