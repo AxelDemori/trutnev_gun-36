@@ -15,8 +15,16 @@ namespace SaveData
 
         public void OnSave(T data, string path = null)
         {
-            if (data == null && !string.IsNullOrEmpty(path)) return;
-            if (typeof(T).IsSerializable) return;
+
+            if (data == null) return;
+            if (string.IsNullOrEmpty(path)) return;
+            if (!typeof(T).IsSerializable) return;
+            string directory = Path.GetDirectoryName(path);
+            if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
             using var fs = new FileStream(path, FileMode.Create);
             _formatter.Serialize(fs, data);
         }
@@ -24,6 +32,7 @@ namespace SaveData
         public T OnLoad(string path)
         {
             if (!File.Exists(path)) return default;
+
             using var fs = new FileStream(path, FileMode.Open);
             var result = (T)_formatter.Deserialize(fs);
             return result;

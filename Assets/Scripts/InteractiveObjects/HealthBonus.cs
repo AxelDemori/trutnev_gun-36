@@ -31,6 +31,7 @@ namespace InteractiveObjects
         {
             _health.Health.SetValueAndForceNotify(20);
             _counter.Count.Value += 1;
+            Debug.LogError(message: "HP RESTORED!");
         }
 
         public override void Execute()
