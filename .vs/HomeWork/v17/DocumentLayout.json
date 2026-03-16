@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD24A495-5F01-399F-DC35-24D8A9A3803F}|Assembly-CSharp.csproj|c:\\users\\mayor\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\homework\\assets\\_project\\scripts\\lighting\\lighting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD24A495-5F01-399F-DC35-24D8A9A3803F}|Assembly-CSharp.csproj|c:\\users\\mayor\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\homework\\assets\\_project\\scripts\\ai\\aimeleeattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD24A495-5F01-399F-DC35-24D8A9A3803F}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\ai\\aimeleeattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\Ai\\AiAgentMelee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\_Project\\Scripts\\Ai\\AiAgentMelee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\Diabolical Games\\Destructible Objects\\Scripts\\DestructibleObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Diabolical Games\\Destructible Objects\\Scripts\\DestructibleObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD24A495-5F01-399F-DC35-24D8A9A3803F}|Assembly-CSharp.csproj|C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\assets\\_project\\scripts\\lighting\\lighting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD24A495-5F01-399F-DC35-24D8A9A3803F}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\lighting\\lighting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -47,19 +59,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AiMeleeAttack.cs",
+              "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\Ai\\AiMeleeAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Ai\\AiMeleeAttack.cs",
+              "ToolTip": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\Ai\\AiMeleeAttack.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\Ai\\AiMeleeAttack.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAmwBYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:16:29.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AiAgentMelee.cs",
+              "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\Ai\\AiAgentMelee.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Ai\\AiAgentMelee.cs",
+              "ToolTip": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\Ai\\AiAgentMelee.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\Ai\\AiAgentMelee.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:59:26.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DestructibleObject.cs",
+              "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\Diabolical Games\\Destructible Objects\\Scripts\\DestructibleObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Diabolical Games\\Destructible Objects\\Scripts\\DestructibleObject.cs",
+              "ToolTip": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\Diabolical Games\\Destructible Objects\\Scripts\\DestructibleObject.cs",
+              "RelativeToolTip": "Assets\\Diabolical Games\\Destructible Objects\\Scripts\\DestructibleObject.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:36:09.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Lighting.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\Lighting\\Lighting.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Lighting\\Lighting.cs",
               "ToolTip": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\Lighting\\Lighting.cs",
               "RelativeToolTip": "Assets\\_Project\\Scripts\\Lighting\\Lighting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T13:34:31.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T13:34:31.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "MeleeAgentFixer.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\MeleeAgentFixer.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\MeleeAgentFixer.cs",
@@ -70,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AiAgentMelee.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\AiAgentMelee.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\AiAgentMelee.cs",
@@ -82,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "AiMeleeAttack.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\AiMeleeAttack.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\AiMeleeAttack.cs",
@@ -94,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "AiFindTargetState.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\Scripts\\Ai\\AiFindTargetState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Ai\\AiFindTargetState.cs",
@@ -106,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AiAgent.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\Scripts\\Ai\\AiAgent.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Ai\\AiAgent.cs",
@@ -118,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "AiMeleeAttackState.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\_Project\\Scripts\\AiMeleeAttackState.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\AiMeleeAttackState.cs",
@@ -130,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "AiSensor.cs",
               "DocumentMoniker": "C:\\Users\\mayor\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\HomeWork\\Assets\\Scripts\\Ai\\AiSensor.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Ai\\AiSensor.cs",

@@ -66,10 +66,12 @@
     <Compile Include="Assets\_Project\Scripts\Ai\AiMeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\Debug\DebugDrawSphere.cs" />
     <Compile Include="Assets\Scripts\Environment\SetSunDirection.cs" />
+    <Compile Include="Assets\Low-Poly\Diabolical Games\Destructible Objects\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\Player\ActiveWeapon.cs" />
     <Compile Include="Assets\_Project\Scripts\Ai\AiMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Animation\MeshSockets.cs" />
+    <Compile Include="Assets\Low-Poly\Diabolical Games\Destructible Objects\Scripts\Despawn.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterLocomotion.cs" />
     <Compile Include="Assets\Scripts\Character\Ragdoll.cs" />
     <Compile Include="Assets\Scripts\Ai\AiIdleState.cs" />
@@ -82,7 +84,6 @@
     <Compile Include="Assets\Scripts\Ai\AiDeathState.cs" />
     <Compile Include="Assets\Scripts\Ai\AiTargetingSystem.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponRecoil.cs" />
-    <Compile Include="Assets\_Project\Scripts\Ai\MeleeAgentFixer.cs" />
     <Compile Include="Assets\Scripts\UI\AmmoWidget.cs" />
     <Compile Include="Assets\Scripts\Ai\AiState.cs" />
     <Compile Include="Assets\Scripts\Environment\AmmoPickup.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Scripts\Ai\AiAgentConfig.cs" />
     <Compile Include="Assets\Scripts\Animation\BounceAnimation.cs" />
     <Compile Include="Assets\Scripts\UI\UIHealthBar.cs" />
+    <Compile Include="Assets\Low-Poly\Diabolical Games\Destructible Objects\Scripts\DestructibleObject.cs" />
     <Compile Include="Assets\Scripts\Ai\AiAgent.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterAiming.cs" />
     <Compile Include="Assets\Scripts\Camera\MouseEject.cs" />
@@ -108,6 +110,7 @@
     <Compile Include="Assets\Scripts\Environment\HealthPickup.cs" />
     <Compile Include="Assets\Scripts\Animation\MeshSocket.cs" />
     <Compile Include="Assets\Scripts\Weapons\RaycastWeapon.cs" />
+    <Compile Include="Assets\Low-Poly\Diabolical Games\Destructible Objects\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Debug\DebugDrawLine.cs" />
     <Compile Include="Assets\Scripts\Debug\DebugNavMeshAgent.cs" />
     <Compile Include="Assets\Scripts\Ai\AiFindHealthState.cs" />
@@ -118,7 +121,9 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Low-Poly\Low Poly Desert Environment\LICENSE.txt" />
     <None Include="Assets\Shaders\lerp_colourhsv.hlsl" />
+    <None Include="Assets\Low-Poly\Diabolical Games\Destructible Objects\Destructible Objects.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

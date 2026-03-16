@@ -13,7 +13,7 @@ public class AiAgent : MonoBehaviour
     [HideInInspector] public Ragdoll ragdoll;
     [HideInInspector] public SkinnedMeshRenderer mesh;
     [HideInInspector] public UIHealthBar ui;
-    [HideInInspector] public Transform playerTransform;
+    public Transform playerTransform;
     [HideInInspector] public AiWeapons weapons;
     [HideInInspector] public AiSensor sensor;
     [HideInInspector] public AiTargetingSystem targeting;
