@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8693831468681125217}
   - component: {fileID: 6280687073228674600}
   - component: {fileID: 1497472527551689337}
+  - component: {fileID: 2825609108079250162}
   m_Layer: 0
   m_Name: Uzi
   m_TagString: Untagged
@@ -83,3 +84,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2825609108079250162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318711156638142190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a546edfb7e2448bbd93944cf9df51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  weaponSlot: 0
+  holsterSocket: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  isFiring: 0
+  debug: 0
+  fireRate: 25
+  bulletSpeed: 1000
+  bulletDrop: 0
+  maxBounces: 0
+  ammoCount: 30
+  clipSize: 30
+  clipCount: 2
+  damage: 10
+  animator: {fileID: 0}
+  muzzleFlash: []
+  hitEffect: {fileID: 0}
+  tracerEffect: {fileID: 0}
+  raycastOrigin: {fileID: 0}
+  recoil: {fileID: 0}
+  magazine: {fileID: 0}

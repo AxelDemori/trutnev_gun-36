@@ -66,5 +66,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 720f758207cecc44788f130ef9b0b9bd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6346136701879108408}
   m_SourcePrefab: {fileID: 100100000, guid: 720f758207cecc44788f130ef9b0b9bd, type: 3}
+--- !u!1 &3435029665154171778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 720f758207cecc44788f130ef9b0b9bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2552068287592447699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6346136701879108408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435029665154171778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a546edfb7e2448bbd93944cf9df51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  weaponSlot: 0
+  holsterSocket: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  isFiring: 0
+  debug: 0
+  fireRate: 0
+  bulletSpeed: 0
+  bulletDrop: 0
+  maxBounces: 0
+  ammoCount: 0
+  clipSize: 0
+  clipCount: 0
+  damage: 30
+  animator: {fileID: 9100000, guid: 23dc8b15a581bd2408428f91f54c93a2, type: 2}
+  muzzleFlash: []
+  hitEffect: {fileID: 0}
+  tracerEffect: {fileID: 0}
+  raycastOrigin: {fileID: 0}
+  recoil: {fileID: 0}
+  magazine: {fileID: 0}

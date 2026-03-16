@@ -160,6 +160,10 @@ public class RaycastWeapon : MonoBehaviour
         }
         ammoCount--;
 
+        WeaponSound ws = GetComponent<WeaponSound>();
+        if (ws != null) ws.PlayShoot();
+
+
         foreach (var particle in muzzleFlash) {
             particle.Emit(1);
         }

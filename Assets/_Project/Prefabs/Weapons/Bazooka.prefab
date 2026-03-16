@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5465665208788059518}
   - component: {fileID: 3118622327544200991}
   - component: {fileID: 5840713217946202899}
+  - component: {fileID: -6647298897042188352}
   m_Layer: 0
   m_Name: Bazooka
   m_TagString: Untagged
@@ -83,3 +84,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-6647298897042188352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960485652898012738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a546edfb7e2448bbd93944cf9df51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  weaponSlot: 0
+  holsterSocket: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  isFiring: 0
+  debug: 0
+  fireRate: 1
+  bulletSpeed: 500
+  bulletDrop: 0
+  maxBounces: 0
+  ammoCount: 30
+  clipSize: 1
+  clipCount: 2
+  damage: 50
+  animator: {fileID: 0}
+  muzzleFlash: []
+  hitEffect: {fileID: 0}
+  tracerEffect: {fileID: 0}
+  raycastOrigin: {fileID: 0}
+  recoil: {fileID: 0}
+  magazine: {fileID: 0}
