@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AiFindTargetState : AiState
@@ -20,7 +18,16 @@ public class AiFindTargetState : AiState
         }
 
         if (agent.targeting.HasTarget) {
-            agent.stateMachine.ChangeState(AiStateId.AttackTarget);
+            
+            bool hasMelee = agent.GetComponent<AiMeleeAttack>() != null;
+            
+            if (hasMelee) {
+               
+                agent.stateMachine.ChangeState(AiStateId.MeleeAttack);
+            } else {
+
+                agent.stateMachine.ChangeState(AiStateId.AttackTarget);
+            }
         }
     }
 

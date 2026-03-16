@@ -63,12 +63,13 @@
     <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Ai\AiAttackTargetState.cs" />
     <Compile Include="Assets\Scripts\Ai\AiFindAmmoState.cs" />
-    <Compile Include="Assets\_Project\Scripts\AiKnifeAttack.cs" />
     <Compile Include="Assets\Scripts\Debug\DebugDrawSphere.cs" />
     <Compile Include="Assets\Scripts\Environment\SetSunDirection.cs" />
     <Compile Include="Assets\Scripts\Player\ActiveWeapon.cs" />
+    <Compile Include="Assets\_Project\Scripts\MeleeAgentFixer.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Animation\MeshSockets.cs" />
+    <Compile Include="Assets\_Project\Scripts\AiMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterLocomotion.cs" />
     <Compile Include="Assets\Scripts\Character\Ragdoll.cs" />
     <Compile Include="Assets\Scripts\Ai\AiIdleState.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets\Scripts\Ai\AiChasePlayerState.cs" />
     <Compile Include="Assets\Scripts\Ai\AiSensoryMemory.cs" />
     <Compile Include="Assets\Scripts\Environment\HealthPickup.cs" />
+    <Compile Include="Assets\_Project\Scripts\AiMeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\Animation\MeshSocket.cs" />
     <Compile Include="Assets\Scripts\Weapons\RaycastWeapon.cs" />
     <Compile Include="Assets\Scripts\Debug\DebugDrawLine.cs" />

@@ -1,18 +1,18 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AiMeleeAttack : MonoBehaviour
 {
-    [Header("Attack Settings")]
+    
     [SerializeField] private float _attackCooldown = 2f;
     [SerializeField] private float _attackRange = 3f;
     [SerializeField] private int _attackDamage = 20;
     [SerializeField] private float _attackDuration = 1f;
-
-    [Header("Animation")]
     [SerializeField] private string _attackTriggerName = "KnifeAttack";
 
     private AiAgent _agent;
     private Animator _animator;
+    private NavMeshAgent _navAgent;
     private float _attackTimer;
     private bool _isAttacking;
 
@@ -20,9 +20,7 @@ public class AiMeleeAttack : MonoBehaviour
     {
         _agent = GetComponent<AiAgent>();
         _animator = GetComponent<Animator>();
-
-        if (_animator == null)
-            _animator = gameObject.AddComponent<Animator>();
+        _navAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -37,13 +35,18 @@ public class AiMeleeAttack : MonoBehaviour
         {
             HandleMeleeAttack();
         }
+        else
+        {
+            _isAttacking = false;
+        }
     }
 
     private bool CanAttack()
     {
         return _agent != null &&
                _agent.targeting != null &&
-               _agent.targeting.HasTarget;
+               _agent.targeting.HasTarget &&
+               _agent.targeting.Target != null;
     }
 
     private void HandleMeleeAttack()
@@ -64,18 +67,19 @@ public class AiMeleeAttack : MonoBehaviour
         _isAttacking = true;
         _attackTimer = 0;
 
-        // Останавливаем движение
-        if (_agent.navMeshAgent != null)
-            _agent.navMeshAgent.isStopped = true;
+        if (_navAgent != null)
+        {
+            _navAgent.isStopped = true;
+            _navAgent.ResetPath();
+        }
 
-        // Запускаем анимацию
         if (_animator != null)
+        {
+            _animator.SetFloat("speed", 0);
             _animator.SetTrigger(_attackTriggerName);
+        }
 
-        // Урон в середине анимации
         Invoke(nameof(ApplyDamage), _attackDuration * 0.5f);
-
-        Debug.Log($"{gameObject.name} performs knife attack!");
     }
 
     private void EndAttack()
@@ -83,9 +87,15 @@ public class AiMeleeAttack : MonoBehaviour
         _isAttacking = false;
         _attackTimer = 0;
 
-        // Возобновляем движение
-        if (_agent.navMeshAgent != null)
-            _agent.navMeshAgent.isStopped = false;
+        if (_navAgent != null)
+        {
+            _navAgent.isStopped = false;
+
+            if (CanAttack())
+            {
+                _navAgent.SetDestination(_agent.targeting.TargetPosition);
+            }
+        }
     }
 
     private void ApplyDamage()
@@ -95,25 +105,17 @@ public class AiMeleeAttack : MonoBehaviour
         var target = _agent.targeting.Target;
         if (target == null) return;
 
-        // Проверяем дистанцию
         float distance = Vector3.Distance(transform.position, target.transform.position);
         if (distance > _attackRange) return;
 
-        // Получаем компонент здоровья игрока
         var playerHealth = target.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
-            // Направление удара (от AI к игроку)
             Vector3 attackDirection = (target.transform.position - transform.position).normalized;
-
-            // ИСПОЛЬЗУЕМ TakeDamage из базового класса Health
             playerHealth.TakeDamage(_attackDamage, attackDirection);
-
-            Debug.Log($"AI damaged player for {_attackDamage}! Player health: {playerHealth.currentHealth}");
         }
     }
 
-    // Для отладки радиуса атаки
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
